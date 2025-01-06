@@ -3,7 +3,9 @@ package com.example.speechtotextapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +17,7 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView text;
+    TextView text, text1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
         text = findViewById(R.id.textView);
+        text1 = findViewById(R.id.textView1);
+        text1.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Toast.makeText(MainActivity.this, "Hello World!!!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

@@ -31,11 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         text = findViewById(R.id.textView);
         text1 = findViewById(R.id.textView1);
-        text1.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-                Toast.makeText(MainActivity.this, "Hello World!!!", Toast.LENGTH_SHORT).show();
-            }
-        });
+        text1.setOnClickListener(view -> Toast.makeText(MainActivity.this, "Hello World!!!", Toast.LENGTH_SHORT).show());
     }
 
     @Override
